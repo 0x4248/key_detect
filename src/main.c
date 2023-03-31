@@ -34,7 +34,8 @@ int main(int argc, char *argv[]) {
 
     printf("Listening for keypresses. Press Ctrl+C to exit.\n");
 
-    while (ch = getchar()) {
+    while (true) {
+        ch = getchar();
         if (binary_mode) {
             for (int i = 7; i >= 0; i--) {
                 printf("%d", (ch >> i) & 1);
