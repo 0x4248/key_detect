@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
             printf("  -b\tBinary mode. Prints the binary representation of the keypress.\n");
             printf("  -h\tPrints this help message.\n");
             return EXIT_SUCCESS;
-        } else if (argv[1][0] == '-' && argv[1][1] == '-' && argv[1][2] == 'h' && argv[1][3] == 'e' && argv[1][4] == 'x'){
+        } else if (argv[1][0] == '-' && argv[1][1] == '-' && argv[1][2] == 'h' && argv[1][3] == 'e' && argv[1][4] == 'x' || argv[1][0] == '-' && argv[1][1] == 'x'){
             hex_mode = true;
         }
     }
