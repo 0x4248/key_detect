@@ -12,6 +12,7 @@
 
 int main(int argc, char *argv[]) {
     bool binary_mode = false;
+    bool hex_mode = false;
     if (argc > 1) {
         if (argv[1][0] == '-' && argv[1][1] == 'b') {
             binary_mode = true;
@@ -20,6 +21,8 @@ int main(int argc, char *argv[]) {
             printf("  -b\tBinary mode. Prints the binary representation of the keypress.\n");
             printf("  -h\tPrints this help message.\n");
             return EXIT_SUCCESS;
+        } else if (argv[1][0] == '-' && argv[1][1] == '-' && argv[1][2] == 'h' && argv[1][3] == 'e' && argv[1][4] == 'x'){
+            hex_mode = true;
         }
     }
     struct termios oldt, newt;
@@ -37,6 +40,9 @@ int main(int argc, char *argv[]) {
                 printf("%d", (ch >> i) & 1);
             }
             printf("\n");
+        } else if (hex_mode) {
+            printf("Code: 0x%x\tCharacter: %c\n", ch, ch);
+            fflush(stdout);
         } else {
             printf("Code: %d\tCharacter: %c\n", ch, ch);
             fflush(stdout);
