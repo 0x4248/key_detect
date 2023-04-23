@@ -2,6 +2,8 @@
  * Key detect (main.c)
  * A simple program to detect keypresses.
  * Github: https://www.github.com/awesomelewis2007/key_detect
+ * Licence: GPL-3.0
+ * By: Lewis Evans
 */
 
 #include <stdio.h>
