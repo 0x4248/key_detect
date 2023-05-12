@@ -1,6 +1,6 @@
 # ⌨️ key_detect
 
-A simple key detection program for testing the keyboard.
+A simple key detection program for testing the keyboard and figuring out the key codes you keyboard sends.
 
 ## ❓ Usage
 To use this program, simply run the following command and press any key on the keyboard. To exit the program, press `Ctrl+C`.
