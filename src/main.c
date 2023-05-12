@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
     newt.c_lflag &= ~(ICANON | ECHO);
     tcsetattr(STDIN_FILENO, TCSANOW, &newt);
 
-    printf("Listening for keypresses. Press Ctrl+C to exit.\n");
+    printf("Listening for keypresses. Press Ctrl+C to stop listening and exit.\n");
 
     while (true) {
         ch = getchar();
