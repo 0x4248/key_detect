@@ -16,9 +16,14 @@ int main(int argc, char *argv[]) {
     bool binary_mode = false;
     bool hex_mode = false;
     if (argc > 1) {
+        /* Argument parsing */
         if (argv[1][0] == '-' && argv[1][1] == 'b') {
             binary_mode = true;
         } else if (argv[1][0] == '-' && argv[1][1] == 'h') {
+            /**
+             * Help message
+             * If the user uses the -h flag, print the help message and exit.
+            */
             printf("Usage: key_detect [-b]\n");
             printf("  -b\tBinary mode. Prints the binary representation of the keypress.\n");
             printf("  -h\tPrints this help message.\n");
@@ -37,6 +42,10 @@ int main(int argc, char *argv[]) {
     printf("Listening for keypresses. Press Ctrl+C to stop listening and exit.\n");
 
     while (true) {
+        /**
+         * Main loop
+         * This is the main loop of the program. It listens for keypresses and prints them to the screen.
+        */
         ch = getchar();
         if (binary_mode) {
             for (int i = 7; i >= 0; i--) {
