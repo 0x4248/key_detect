@@ -4,7 +4,7 @@
     "version": "",
     "main_file": "src/main.c",
     "author": "Lewis Evans",
-    "license": "none",
+    "license": "GNU General Public License v3.0",
     "url": "https://www.github.com/awesomelewis2007/key_detect",
     "email": "none",
     "languages": [
