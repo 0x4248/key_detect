@@ -1,0 +1,14 @@
+{
+    "name": "key_detect",
+    "description": "A simple key detection program for testing the keyboard and figuring out the key codes you keyboard sends.",
+    "version": "",
+    "main_file": "src/main.c",
+    "author": "Lewis Evans",
+    "license": "none",
+    "url": "https://www.github.com/awesomelewis2007/key_detect",
+    "email": "none",
+    "languages": [
+        "c"
+    ],
+    "actions": {}
+}
