@@ -1,6 +1,6 @@
 # Key detect (Makefile)
 # A simple program to detect keypresses.
-# Github: https://www.github.com/awesomelewis2007/key_detect
+# Github: https://www.github.com/lewisevans2007/key_detect
 
 CC = gcc
 CFLAGS =
