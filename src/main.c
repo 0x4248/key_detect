@@ -4,13 +4,13 @@
  * Github: https://www.github.com/lewisevans2007/key_detect
  * Licence: GNU General Public License v3.0
  * By: Lewis Evans
-*/
+ */
 
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <termios.h>
 #include <unistd.h>
-#include <stdbool.h>
 
 int main(int argc, char *argv[]) {
     bool binary_mode = false;
@@ -22,10 +22,14 @@ int main(int argc, char *argv[]) {
             binary_mode = true;
         } else if (argv[1][0] == '-' && argv[1][1] == 'h') {
             printf("Usage: key_detect [-b]\n");
-            printf("  -b\tBinary mode. Prints the binary representation of the keypress.\n");
+            printf("  -b\tBinary mode. Prints the binary representation of the "
+                   "keypress.\n");
             printf("  -h\tPrints this help message.\n");
             return EXIT_SUCCESS;
-        } else if (argv[1][0] == '-' && argv[1][1] == '-' && argv[1][2] == 'h' && argv[1][3] == 'e' && argv[1][4] == 'x' || argv[1][0] == '-' && argv[1][1] == 'x'){
+        } else if (argv[1][0] == '-' && argv[1][1] == '-' &&
+                       argv[1][2] == 'h' && argv[1][3] == 'e' &&
+                       argv[1][4] == 'x' ||
+                   argv[1][0] == '-' && argv[1][1] == 'x') {
             hex_mode = true;
         }
     }
@@ -37,7 +41,8 @@ int main(int argc, char *argv[]) {
     newt.c_lflag &= ~(ICANON | ECHO);
     tcsetattr(STDIN_FILENO, TCSANOW, &newt);
 
-    printf("Listening for keypresses. Press Ctrl+C to stop listening and exit.\n");
+    printf(
+        "Listening for keypresses. Press Ctrl+C to stop listening and exit.\n");
 
     while (true) {
         /* Main loop */
@@ -54,7 +59,6 @@ int main(int argc, char *argv[]) {
             printf("Code: %d\tCharacter: %c\n", ch, ch);
             fflush(stdout);
         }
-
     }
 
     tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
