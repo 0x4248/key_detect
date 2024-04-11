@@ -3,9 +3,9 @@
     "description": "A simple key detection program for testing the keyboard and figuring out the key codes you keyboard sends.",
     "version": "",
     "main_file": "src/main.c",
-    "author": "Lewis Evans",
+    "author": "0x4248",
     "license": "GNU General Public License v3.0",
-    "url": "https://www.github.com/lewisevans2007/key_detect",
+    "url": "https://www.github.com/0x4248/key_detect",
     "email": "none",
     "languages": [
         "c"
