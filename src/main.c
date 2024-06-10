@@ -24,6 +24,8 @@ int main(int argc, char *argv[]) {
             printf("Usage: key_detect [-b]\n");
             printf("  -b\tBinary mode. Prints the binary representation of the "
                    "keypress.\n");
+            printf("  -x\tHexadecimal mode. Prints the hexadecimal "
+                   "representation of the keypress.\n");
             printf("  -h\tPrints this help message.\n");
             return EXIT_SUCCESS;
         } else if (argv[1][0] == '-' && argv[1][1] == '-' &&
@@ -42,7 +44,7 @@ int main(int argc, char *argv[]) {
     tcsetattr(STDIN_FILENO, TCSANOW, &newt);
 
     printf(
-        "Listening for keypresses. Press Ctrl+C to stop listening and exit.\n");
+        "Listening for keypresses.\nPress Ctrl+C to stop listening and exit.\n");
 
     while (true) {
         /* Main loop */
