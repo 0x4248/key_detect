@@ -43,8 +43,8 @@ int main(int argc, char *argv[]) {
     newt.c_lflag &= ~(ICANON | ECHO);
     tcsetattr(STDIN_FILENO, TCSANOW, &newt);
 
-    printf(
-        "Listening for keypresses.\nPress Ctrl+C to stop listening and exit.\n");
+    printf("Listening for keypresses.\nPress Ctrl+C to stop listening and "
+           "exit.\n");
 
     while (true) {
         /* Main loop */
